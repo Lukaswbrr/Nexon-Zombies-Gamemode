@@ -1,0 +1,22 @@
+"nexonzombiesmode"
+{
+	"base"		"base"
+	"title"		"Nexon Zombie Mode"
+	"maps"		"^gm_"
+	"menusystem"	"1"
+
+        "settings"
+        {
+          1
+           {
+              "name"		"sv_gravity"
+	      "text"		"Gravity"
+	      "help"		"World Gravity."
+              "type"		"Numeric"
+	       "default"	"600"
+	   }
+
+        }
+
+
+}
