@@ -13,10 +13,18 @@ function GM:CreateTeams()
    
    team.SetUp( TEAM_HUMANS, "Humans", Color( 200, 0, 200 ), true )
    team.SetSpawnPoint( TEAM_HUMANS, { "info_player_start", "info_player_terrorist", "info_player_rebel", "info_player_deathmatch" } )
-   team.SetClass( TEAM_HUMANS, { "Humans" } )
+   team.SetClass( TEAM_HUMANS, { "Human" } )
    
 end
 
 function GM:Initialize()
    
+end
+
+if (SERVER) then
+
+   function GM:PlayerSpawn(ply)
+      player_manager.SetPlayerClass( ply, "Human" )
+   end
+
 end

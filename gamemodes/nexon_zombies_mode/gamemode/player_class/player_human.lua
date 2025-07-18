@@ -10,8 +10,8 @@ CLASS.PlayerModel			= "models/player/combine_soldier.mdl"
 CLASS.DrawTeamRing			= true
 CLASS.DrawViewModel			= true
 CLASS.CanUseFlashlight      = true
-CLASS.MaxHealth				= 100
-CLASS.StartHealth			= 100
+CLASS.MaxHealth				= 1000
+CLASS.StartHealth			= 1000
 CLASS.StartArmor			= 0
 CLASS.RespawnTime           = 0 // 0 means use the default spawn time chosen by gamemode
 CLASS.DropWeaponOnDie		= false
@@ -51,4 +51,4 @@ end
 function CLASS:CalcView( ply, origin, angles, fov )
 end
  
-player_class.Register( "Human", CLASS )
+player_manager.RegisterClass( "Human", CLASS )
