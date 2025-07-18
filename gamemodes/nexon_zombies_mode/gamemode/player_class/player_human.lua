@@ -1,55 +1,21 @@
-local CLASS = {}
- 
-CLASS.DisplayName			= "Human"
-CLASS.WalkSpeed 			= 400
-CLASS.CrouchedWalkSpeed 	= 0.2
-CLASS.RunSpeed				= 600
-CLASS.DuckSpeed				= 0.2
-CLASS.JumpPower				= 200
-CLASS.PlayerModel			= "models/player/combine_soldier.mdl"
-CLASS.DrawTeamRing			= true
-CLASS.DrawViewModel			= true
-CLASS.CanUseFlashlight      = true
-CLASS.MaxHealth				= 1000
-CLASS.StartHealth			= 1000
-CLASS.StartArmor			= 0
-CLASS.RespawnTime           = 0 -- 0 means use the default spawn time chosen by gamemode
-CLASS.DropWeaponOnDie		= false
-CLASS.TeammateNoCollide 	= true
-CLASS.AvoidPlayers			= false -- Automatically avoid players that we're no colliding
-CLASS.Selectable			= true -- When false, this disables all the team checking
-CLASS.FullRotation			= false -- Allow the player's model to rotate upwards, etc etc
- 
-function CLASS:Loadout( pl )
- 
-	pl:Give( "weapon_smg1" )
- 
+DEFINE_BASECLASS("player_default")
+
+local PLAYER            = {}
+
+PLAYER.DisplayName       = "Human"
+PLAYER.PlayerModel       = "models/player/combine_soldier.mdl"
+PLAYER.CanUseFlashlight  = true
+PLAYER.MaxHealth         = 1000
+PLAYER.StartHealth       = 1000
+PLAYER.RespawnTime       = 0     -- 0 means use the default spawn time chosen by gamemode
+PLAYER.DropWeaponOnDie   = false
+PLAYER.TeammateNoCollide = true
+PLAYER.AvoidPlayers      = false -- Automatically avoid players that we're no colliding
+PLAYER.Selectable        = true -- When false, this disables all the team checking
+PLAYER.FullRotation      = false -- Allow the player's model to rotate upwards, etc etc
+
+function PLAYER:Loadout()
+	self.Player:Give("weapon_smg1")
 end
- 
-function CLASS:OnSpawn( pl )
-end
- 
-function CLASS:OnDeath( pl, attacker, dmginfo )
-end
- 
-function CLASS:Think( pl )
-end
- 
-function CLASS:Move( pl, mv )
-end
- 
-function CLASS:OnKeyPress( pl, key )
-end
- 
-function CLASS:OnKeyRelease( pl, key )
-end
- 
-function CLASS:ShouldDrawLocalPlayer( pl )
-	return false
-end
- 
-function CLASS:CalcView( ply, origin, angles, fov )
-	
-end
- 
-player_manager.RegisterClass( "Human", CLASS )
+
+player_manager.RegisterClass("player_human", PLAYER, "player_default")
