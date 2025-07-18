@@ -3,6 +3,7 @@
 	"base"		"base"
 	"title"		"Nexon Zombie Mode"
 	"maps"		"^gm_"
+	"category"	"pvp"
 	"menusystem"	"1"
 
         "settings"
