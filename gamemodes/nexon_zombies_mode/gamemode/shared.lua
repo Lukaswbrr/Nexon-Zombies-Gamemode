@@ -1,5 +1,6 @@
 -- This gamemode is based on Counter-Strike: Online's Zombie Mode. I'm thinking of adding powerups to the gamemode (Like press 6 to run, etc) and maybe custom stuff too. (powerups, stuff)
 
+AddCSLuaFile("player_class/player_human.lua")
 include("player_class/player_human.lua")
 
 GM.Name = "Nexon Zombies Mode"
