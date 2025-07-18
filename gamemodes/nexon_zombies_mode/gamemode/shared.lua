@@ -1,4 +1,4 @@
-// This gamemode is based on Counter-Strike: Online's Zombie Mode. I'm thinking of adding powerups to the gamemode (Like press 6 to run, etc) and maybe custom stuff too. (powerups, stuff)
+-- This gamemode is based on Counter-Strike: Online's Zombie Mode. I'm thinking of adding powerups to the gamemode (Like press 6 to run, etc) and maybe custom stuff too. (powerups, stuff)
 
 GM.Name = "Nexon Zombies Mode"
 GM.Author = "Lukaswbrr"

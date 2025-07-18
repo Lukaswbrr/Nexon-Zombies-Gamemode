@@ -13,12 +13,12 @@ CLASS.CanUseFlashlight      = true
 CLASS.MaxHealth				= 1000
 CLASS.StartHealth			= 1000
 CLASS.StartArmor			= 0
-CLASS.RespawnTime           = 0 // 0 means use the default spawn time chosen by gamemode
+CLASS.RespawnTime           = 0 -- 0 means use the default spawn time chosen by gamemode
 CLASS.DropWeaponOnDie		= false
 CLASS.TeammateNoCollide 	= true
-CLASS.AvoidPlayers			= false // Automatically avoid players that we're no colliding
-CLASS.Selectable			= true // When false, this disables all the team checking
-CLASS.FullRotation			= false // Allow the player's model to rotate upwards, etc etc
+CLASS.AvoidPlayers			= false -- Automatically avoid players that we're no colliding
+CLASS.Selectable			= true -- When false, this disables all the team checking
+CLASS.FullRotation			= false -- Allow the player's model to rotate upwards, etc etc
  
 function CLASS:Loadout( pl )
  
@@ -49,6 +49,7 @@ function CLASS:ShouldDrawLocalPlayer( pl )
 end
  
 function CLASS:CalcView( ply, origin, angles, fov )
+	
 end
  
 player_manager.RegisterClass( "Human", CLASS )
