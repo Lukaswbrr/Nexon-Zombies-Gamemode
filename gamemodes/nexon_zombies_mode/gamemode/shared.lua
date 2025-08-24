@@ -3,6 +3,8 @@
 AddCSLuaFile("player_class/player_human.lua")
 include("player_class/player_human.lua")
 
+local version = "0.1.0-alpha"
+
 GM.Name = "Nexon Zombies Mode"
 GM.Author = "Lukaswbrr"
 GM.TeamBased = true
