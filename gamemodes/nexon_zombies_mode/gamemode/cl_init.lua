@@ -1,1 +1,1 @@
-print("hello")
+include("shared.lua")
