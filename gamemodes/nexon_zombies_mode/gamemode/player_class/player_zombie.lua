@@ -4,13 +4,13 @@ local PLAYER            = {}
 
 
 PLAYER.WalkSpeed = 200
-PLAYER.RunSpeed  = 1000
+PLAYER.RunSpeed  = 500
 
 PLAYER.DisplayName       = "Zombie"
 PLAYER.PlayerModel       = "models/player/combine_soldier.mdl"
 PLAYER.CanUseFlashlight  = true
-PLAYER.MaxHealth         = 1000
-PLAYER.StartHealth       = 1000
+PLAYER.MaxHealth         = 3000
+PLAYER.StartHealth       = 3000
 PLAYER.RespawnTime       = 0     -- 0 means use the default spawn time chosen by gamemode
 PLAYER.DropWeaponOnDie   = false
 PLAYER.TeammateNoCollide = true

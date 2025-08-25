@@ -4,7 +4,7 @@ local PLAYER            = {}
 
 
 PLAYER.WalkSpeed = 200
-PLAYER.RunSpeed  = 800
+PLAYER.RunSpeed  = 400
 
 PLAYER.DisplayName       = "Human"
 PLAYER.PlayerModel       = "models/player/combine_soldier.mdl"
@@ -19,6 +19,7 @@ PLAYER.Selectable        = true -- When false, this disables all the team checki
 PLAYER.FullRotation      = false -- Allow the player's model to rotate upwards, etc etc
 
 function PLAYER:Loadout()
+	self.Player:GiveAmmo( 1000, "SMG1", true )
 	self.Player:Give("weapon_smg1")
 end
 

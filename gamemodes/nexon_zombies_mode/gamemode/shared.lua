@@ -32,4 +32,12 @@ function GM:CreateTeams()
 
 end
 
+function GM:PlayerChangedTeam( ply, oldTeam, newTeam )
+   if newTeam == TEAM_HUMANS then
+      player_manager.SetPlayerClass( ply, "player_human" )
+   elseif newTeam == TEAM_ZOMBIES then
+      player_manager.SetPlayerClass( ply, "player_zombie" )
+   end
+end
+
 -- TODO: make playerspawn apply player.manager onplayerspawn effects
