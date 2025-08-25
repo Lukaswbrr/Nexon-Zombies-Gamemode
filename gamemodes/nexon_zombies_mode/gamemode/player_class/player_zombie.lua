@@ -4,9 +4,9 @@ local PLAYER            = {}
 
 
 PLAYER.WalkSpeed = 200
-PLAYER.RunSpeed  = 800
+PLAYER.RunSpeed  = 1000
 
-PLAYER.DisplayName       = "Human"
+PLAYER.DisplayName       = "Zombie"
 PLAYER.PlayerModel       = "models/player/combine_soldier.mdl"
 PLAYER.CanUseFlashlight  = true
 PLAYER.MaxHealth         = 1000
@@ -19,11 +19,11 @@ PLAYER.Selectable        = true -- When false, this disables all the team checki
 PLAYER.FullRotation      = false -- Allow the player's model to rotate upwards, etc etc
 
 function PLAYER:Loadout()
-	self.Player:Give("weapon_smg1")
+	self.Player:Give("weapon_fists")
 end
 
 function PLAYER:Spawn()	
-	print("its on...")
+	print("zombies will be back")
 end
 
-player_manager.RegisterClass("player_human", PLAYER, "player_default")
+player_manager.RegisterClass("player_zombie", PLAYER, "player_default")
